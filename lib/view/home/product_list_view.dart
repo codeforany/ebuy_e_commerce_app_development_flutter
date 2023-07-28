@@ -1,9 +1,11 @@
+import 'package:ebuy_ecommerce/view/home/filter_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/home_styles_cell.dart';
 import '../../common_widget/icon_text_button.dart';
 import '../../common_widget/product_cell.dart';
+import '../../common_widget/sort_row.dart';
 
 class ProductListView extends StatefulWidget {
   const ProductListView({super.key});
@@ -13,6 +15,8 @@ class ProductListView extends StatefulWidget {
 }
 
 class _ProductListViewState extends State<ProductListView> {
+  int sortType = 0;
+
   List listArr = [
     {
       "name": "Handbag LV",
@@ -129,7 +133,9 @@ class _ProductListViewState extends State<ProductListView> {
                   child: IconTextButton(
                     title: "Sort",
                     icon: "assets/img/sort-tool.png",
-                    onPressed: () {},
+                    onPressed: () {
+                      openSort();
+                    },
                   ),
                 ),
                 const SizedBox(
@@ -139,7 +145,9 @@ class _ProductListViewState extends State<ProductListView> {
                   child: IconTextButton(
                     title: "Filter",
                     icon: "assets/img/filter.png",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const FilterView() ) );
+                    },
                   ),
                 )
               ],
@@ -169,5 +177,70 @@ class _ProductListViewState extends State<ProductListView> {
         ],
       ),
     );
+  }
+
+  void openSort() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            backgroundColor: Colors.transparent,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                decoration: BoxDecoration(
+                    color: TColor.white,
+                    borderRadius: BorderRadius.circular(3)),
+                child: Column(
+                  children: [
+                    SortRow(
+                      title: "Recommended",
+                      isSelect: sortType == 0,
+                      onPressed: () {
+                        Navigator.pop(context);
+                        setState(() {
+                          sortType = 0;
+                        });
+                      },
+                    ),
+                    SortRow(
+                      title: "What's New",
+                      isSelect: sortType == 1,
+                      onPressed: () {
+                        Navigator.pop(context);
+                        setState(() {
+                          sortType = 1;
+                        });
+                      },
+                    ),
+                    SortRow(
+                      title: "Price: High to low",
+                      isSelect: sortType == 2,
+                      onPressed: () {
+                        Navigator.pop(context);
+                        setState(() {
+                          sortType = 2;
+                        });
+                      },
+                    ),
+                    SortRow(
+                      title: "Price: Low to high",
+                      isSelect: sortType == 3,
+                      onPressed: () {
+                        Navigator.pop(context);
+                        setState(() {
+                          sortType = 3;
+                        });
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ]),
+          );
+        });
   }
 }

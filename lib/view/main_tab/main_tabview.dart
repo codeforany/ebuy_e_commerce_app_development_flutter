@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../common/color_extension.dart';
+import '../account/account_view.dart';
 import '../fav/saved_item_view.dart';
 import '../home/home_view.dart';
 import '../search/search_view.dart';
@@ -48,7 +49,7 @@ class _MainTabViewState extends State<MainTabView>
           const SearchView(),
           Container(),
           const SavedItemsView(),
-          Container(),
+          const AccountView(),
         ],
       ),
       bottomNavigationBar: Container(

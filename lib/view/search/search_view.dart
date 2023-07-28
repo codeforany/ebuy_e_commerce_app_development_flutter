@@ -59,16 +59,16 @@ class _SearchViewState extends State<SearchView> {
       appBar: AppBar(
         backgroundColor: TColor.white,
         elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Image.asset(
-              "assets/img/back.png",
-              width: 20,
-              height: 20,
-              color: TColor.secondaryText,
-            )),
+        // leading: IconButton(
+        //     onPressed: () {
+        //       Navigator.pop(context);
+        //     },
+        //     icon: Image.asset(
+        //       "assets/img/back.png",
+        //       width: 20,
+        //       height: 20,
+        //       color: TColor.secondaryText,
+        //     )),
         title: Container(
           decoration: BoxDecoration(
             color: TColor.secondaryText.withOpacity(0.2),

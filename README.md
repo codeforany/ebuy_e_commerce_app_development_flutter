@@ -28,6 +28,7 @@ Best practices for building an ECommerce app
 - [Youtube Video Part-1: App Induction & OnBoarding, Signup UI](https://youtu.be/esWkNKAgnPg)
 - [Youtube Video Part-2: Home UI & TabView](https://youtu.be/CRzyriOB3uo)
 - [Youtube Video Part-3: Product List & Search](https://youtu.be/2igQNVCCPEQ)
+- [Youtube Video Part-4: Product Sort, Filter & Account UI](https://youtu.be/3mW1VqLwnQ4)
 
 
 UI UX App Design by: [Capi Creative](https://capiagency.com/?ref=uistore.design)
