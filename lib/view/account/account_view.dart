@@ -1,3 +1,5 @@
+import 'package:ebuy_ecommerce/view/account/my_order_view.dart';
+import 'package:ebuy_ecommerce/view/account/settings_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/color_extension.dart';
@@ -27,7 +29,7 @@ class _AccountViewState extends State<AccountView> {
                 title: Text(
                   "Account",
                   style: TextStyle(color: TColor.primary, fontSize: 20),
-                ) ,
+                ),
                 flexibleSpace: FlexibleSpaceBar(
                   background: Stack(
                     alignment: Alignment.center,
@@ -83,7 +85,14 @@ class _AccountViewState extends State<AccountView> {
                 // elevation: 0,
                 actions: [
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SettingsView(),
+                          ),
+                        );
+                      },
                       icon: Image.asset(
                         "assets/img/gear.png",
                         width: 22,
@@ -116,7 +125,14 @@ class _AccountViewState extends State<AccountView> {
                       AccountRow(
                         title: "My Order",
                         icon: "assets/img/box-3d-50.png",
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MyOrderView(),
+                            ),
+                          );
+                        },
                       ),
                       AccountRow(
                         title: "Premier Delivery",

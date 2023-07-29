@@ -5,12 +5,14 @@ import '../common/color_extension.dart';
 class AccountRow extends StatelessWidget {
   final String title;
   final String icon;
+  final String value;
   final VoidCallback onPressed;
 
   const AccountRow(
       {super.key,
       required this.title,
       required this.icon,
+      this.value = "",
       required this.onPressed});
 
   @override
@@ -21,15 +23,15 @@ class AccountRow extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(
-            height: 40,
+            height: 50,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
 
                 Image.asset(
                     icon,
-                    width: 20,
-                    height: 20,
+                    width: 25,
+                    height: 25,
                     color:  TColor.primary,
                   ),
 
@@ -41,6 +43,15 @@ class AccountRow extends StatelessWidget {
                     style: TextStyle(color: TColor.primaryText, fontSize: 16),
                   ),
                 ),
+
+                Text(
+                    value,
+                    style: TextStyle(color: TColor.secondaryText, fontSize: 14),
+                  ),
+
+                 const SizedBox(width: 8,),
+
+
                 Image.asset(
                     "assets/img/right.png",
                     width: 15,
