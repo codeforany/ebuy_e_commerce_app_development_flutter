@@ -1,3 +1,4 @@
+import 'package:ebuy_ecommerce/view/account/gift_card_view.dart';
 import 'package:ebuy_ecommerce/view/account/my_order_view.dart';
 import 'package:ebuy_ecommerce/view/account/settings_view.dart';
 import 'package:flutter/material.dart';
@@ -205,7 +206,14 @@ class _AccountViewState extends State<AccountView> {
                       AccountRow(
                         title: "Gift Cards & Voucher",
                         icon: "assets/img/present.png",
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const GiftCardView(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),
