@@ -31,6 +31,7 @@ Best practices for building an ECommerce app
 - [Youtube Video Part-4: Product Sort, Filter & Account UI](https://youtu.be/3mW1VqLwnQ4)
 - [Youtube Video Part-5: My Orders & Settings UI](https://youtu.be/5DDIc_RRfGo)
 - [Youtube Video Part-6: Gift Cards & Gift Voucher UI](https://youtu.be/Nj1eldkEDpI)
+- [Youtube Video Part-7: Add Payment Method & Add Credit / Debit Card UI](https://youtu.be/ubQ1p8CukQ0)
 
 
 UI UX App Design by: [Capi Creative](https://capiagency.com/?ref=uistore.design)

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/account_row.dart';
+import 'add_payment_method_view.dart';
 
 class AccountView extends StatefulWidget {
   const AccountView({super.key});
@@ -172,7 +173,9 @@ class _AccountViewState extends State<AccountView> {
                       AccountRow(
                         title: "Payment Methods",
                         icon: "assets/img/contactless-card.png",
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const AddPaymentMethodView() ) );
+                        },
                       ),
                       AccountRow(
                         title: "Contact preference",
